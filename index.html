@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>document</title>
+	<link rel="shortcut icon" href="images/n-icon.png" type="image/png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width initial-scale=1">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->	
+	<link rel="stylesheet" href="css/jquery-ui-1.8.17.custom.css" type="text/css"/>
+	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<link rel="stylesheet" href="css/style.less" type="text/css"/>
+	<link rel="stylesheet" href="css/craftyslide.css" type="text/css"/>
+	
+	<script src="js/less.js"></script>
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.cycle.all.min.js"></script>
+	<script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/jquery.circle-diagram.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/jquery.columnizer.js"></script>
+	<script>
+		$(function(){
+			$('.column-text')
+			.columnize({columns:3,});
+		});
+	</script>
+	<script type="text/javascript"> 
+		$(document).ready(function() {
+			$("#slideshowCont").css("overflow", "hidden");
+			$("#last").css("display", "block");
+			$("#next").css("display", "block");
+			$('#slideShow ul').cycle({
+			fx: 'scrollLeft',
+			pause:1,
+			next: '#next',
+			prev: '#last',
+			timeout:1
+			});
+		});
+	</script> 
+	</head>
+	<body>
+		<header>
+			<img src="images/header-logo.jpg" alt="logo" title="logo"/>
+		</header>
+		<main>
+			<div class="inner">
+				<div class="wrap_slider_form">
+					<div id="slideshow">
+				        <ul>
+					        <li>
+					            <img src="images/slide1.jpg" alt="" title="" />
+					        </li>
+					        <li>
+					            <img src="images/slide2.jpg" alt="" title="" />
+					        </li>
+					        <li>           
+					             <img src="images/slide3.jpg" alt="" title="" />
+					        </li>
+					         <li>           
+					             <img src="images/slide4.jpg" alt="" title="" />
+					        </li>
+					    </ul>
+				    </div>
+				    <form id="main_form" action="index.php" method="get" name="main_form">
+				    	<h1>Join us now. It's FREE</h1>
+				    	<div class="row">
+				    		<div class="iam">
+					    		<span class="title">I am</span>
+					    		<div class="selection">
+									<input id="radiochecked" type="radio" value="None"  name="check" checked="checked"/>
+									<label for="radiochecked"></label>
+								</div>
+								<div class="selectionTwo">
+									<input id="radio" type="radio" value="None"  name="check" />
+									<label for="radio"></label>
+								</div>
+				    		</div>
+				    		<div class="iam">
+					    		<span class="search">looking for</span>
+					    		<div class="selection">
+									<input id="radioCheckedRight" type="radio" value="None"  name="check2" />
+									<label for="radioCheckedRight"></label>
+								</div>
+								<div class="selectionTwo">
+									<input id="radioRight" type="radio" value="None"  name="check2" checked="checked"/>
+									<label for="radioRight"></label>
+								</div>
+					    	</div>
+				    	</div>
+				    	<div class="row">
+				    		<span class="title">Name</span>
+				    		<input class="text" type="text" name="input_name" value="" required/>
+							<span class="invalid">Enter you name</span>
+							<span class="valid"></span>
+				    	</div>
+				    	<div class="row">
+				    		<span class="title">Age</span>
+				    		<select name="select_number" id="number">
+				    			<option value="">1</option>
+				    			<option value="">2</option>
+				    			<option value="">3</option>
+				    			<option value="">4</option>
+				    			<option value="">5</option>
+				    			<option value="">6</option>
+				    			<option value="">7</option>
+				    			<option value="">8</option>
+				    			<option value="">9</option>
+				    			<option value="">10</option>
+				    			<option value="">11</option>
+				    			<option value="">12</option>
+				    			<option value="">13</option>
+				    			<option value="">14</option>
+				    			<option value="">15</option>
+				    			<option value="">16</option>
+				    			<option value="">17</option>
+				    			<option value="">18</option>
+				    			<option value="">19</option>
+				    			<option value="">20</option>
+				    			<option value="">21</option>
+				    			<option value="">22</option>
+				    			<option value="">23</option>
+				    			<option value="">24</option>
+				    			<option value="">25</option>
+				    			<option value="">26</option>
+				    			<option value="">27</option>
+				    			<option value="">28</option>
+				    			<option value="">29</option>
+				    			<option value="">30</option>
+				    			<option value="">31</option>
+				    		</select>
+				    		<select name="select_month" id="month">
+				    			<option value="">January </option>
+				    			<option value="">February</option>
+				    			<option value="">March</option>
+				    			<option value="">April</option>
+				    			<option value="">May</option>
+				    			<option value="">June</option>
+				    			<option value="">July</option>
+				    			<option value="">August</option>
+				    			<option value="">September</option>
+				    			<option value="">October</option>
+				    			<option value="">November</option>
+				    			<option value="">December</option>
+				    		</select>
+				    		<select name="select_year" id="year">
+				    			<option value="">1984</option>
+				    			<option value="">1985</option>
+				    			<option value="">1986</option>
+				    			<option value="">1987</option>
+				    			<option value="">1988</option>
+				    		</select>
+				    	</div>
+				    	<div class="row">
+				    		<span class="title">City</span>
+				    		<select name="select_city" id="city">
+				    			<option value="">Tokio</option>
+				    			<option value="">London</option>
+				    			<option value="">New York</option>
+				    			<option value="">Mosckow</option>
+				    			<option value="">Kiev</option>
+				    		</select>
+				    	</div>
+				    	<div class="row">
+				    		<div class="center_button_block">
+					    		<div class="button_block">	
+						    		<div class="check_wrap">
+							    		<div class="checkbox_div">
+											<input type="checkbox" value="None" id="top_checkbox" name="check" checked="checked" />
+											<label for="top_checkbox"></label>
+										</div>
+										<span class="check_text">I’m cool</span>
+									</div>
+									<div class="check_wrap">
+										<div class="checkbox_div">
+											<input type="checkbox" value="None" id="bottom_checkbox" name="check2" />
+											<label for="bottom_checkbox"></label>
+										</div>
+										<span class="check_text">Life’s good</span>
+									</div>
+								</div>
+								<div class="button_block">	
+						    		<div class="check_wrap">
+							    		<div class="radio_div">
+											<input type="radio" id="rounder" name="radio" checked="checked" />
+			  								<label for="rounder"></label>
+										</div>
+										<span class="check_text">Tee</span>
+									</div>
+									<div class="check_wrap">
+										<div class="radio_div">
+											<input type="radio" id="rounder1" name="radio" />
+			  								<label for="rounder1"></label>
+										</div>
+										<span class="check_text">Beer</span>
+									</div>
+								</div>
+							</div>
+				    	</div>
+				    	<input id="button" class="gradient" type="submit" name="submit_form" value="Start Now"/>
+				    </form>
+				</div>
+			</div>
+		
+			<div class="container">
+				<div class="inner">
+					<div class="parent">
+						<section class="coloms">
+							<h2>Code this block </h2>
+							<img class="circle_img" src="images/preview.png" alt=""/>
+							<p>
+								This text should be changeable. Lorem ipsum text here. Offers great opportunities to everyone looking to meet locals, find romantic dates and make new friends. Our dating site gives you hours of dating fun, together with seemingly endless possibilities to meet new single people from your area, make friends, go on a date and enjoy good company. With thousands of local personals, will make your life a whole lot busier with all that dating. This is a great place to find true friends or devoted partners for long-term relationships or marriage. We believe that the best way to find a compatible romantic partner is to spend time getting to
+							</p>
+						</section>
+						<section class="coloms">
+							<h2>Users List</h2>
+							<div id="slideshowCont"> 
+								<img src="images/SlastBtn.png"  alt="next" id="next" width="40"/> 
+								<div id="slideShow"> 
+									<ul>
+										<li> 
+											<div class="wrap_guest">
+												<img class="guest" src="images/preview.jpg" alt="testimage"  width="69" height="69"/>
+												<div class="hide">
+													<span>Sexy Girl</span>
+													<a class="wiki" href=""></a>
+													<a class="add" href=""></a>
+												</div> 
+											</div> 
+											<div class="wrap_guest">
+												<img class="guest" src="images/preview.jpg" alt="testimage"  width="69" height="69"/>
+												<div class="hide">
+													<span>Sexy Girl</span>
+													<a class="wiki" href=""></a>
+													<a class="add" href=""></a>
+												</div> 
+											</div> 
+											<div class="wrap_guest">
+												<img class="guest" src="images/preview.jpg" alt="testimage"  width="69" height="69"/> 
+												<div class="hide">
+													<span>Sexy Girl</span>
+													<a class="wiki" href=""></a>
+													<a class="add" href=""></a>
+												</div>
+											</div> 
+											<div class="wrap_guest">
+												<img class="guest" src="images/preview.jpg" alt="testimage"  width="69" height="69"/> 
+												<div class="hide">
+													<span>Sexy Girl</span>
+													<a class="wiki" href=""></a>
+													<a class="add" href=""></a>
+												</div>
+											</div> 
+											<div class="wrap_guest">
+												<img class="guest" src="images/preview.jpg" alt="testimage"  width="69" height="69"/> 
+												<div class="hide">
+													<span>Sexy Girl</span>
+													<a class="wiki" href=""></a>
+													<a class="add" href=""></a>
+												</div>
+											</div> 
+										</li>
+										<li> 
+											<div class="wrap_guest">
+												<img class="guest" src="images/preview.jpg" alt="testimage"  width="69" height="69"/> 
+												<div class="hide">
+													<span>Sexy Girl</span>
+													<a class="wiki" href=""></a>
+													<a class="add" href=""></a>
+												</div>
+											</div> 
+											<div class="wrap_guest">
+												<img class="guest" src="images/preview.jpg" alt="testimage"  width="69" height="69"/> 
+												<div class="hide">
+													<span>Sexy Girl</span>
+													<a class="wiki" href=""></a>
+													<a class="add" href=""></a>
+												</div>
+											</div> 
+											<div class="wrap_guest">
+												<img class="guest" src="images/preview.jpg" alt="testimage"  width="69" height="69"/> 
+												<div class="hide">
+													<span>Sexy Girl</span>
+													<a class="wiki" href=""></a>
+													<a class="add" href=""></a>
+												</div>
+											</div> 
+											<div class="wrap_guest">
+												<img class="guest" src="images/preview.jpg" alt="testimage"  width="69" height="69"/> 
+												<div class="hide">
+													<span>Sexy Girl</span>
+													<a class="wiki" href=""></a>
+													<a class="add" href=""></a>
+												</div>
+											</div> 
+											<div class="wrap_guest">
+												<img class="guest" src="images/preview.jpg" alt="testimage"  width="69" height="69"/> 
+												<div class="hide">
+													<span>Sexy Girl</span>
+													<a class="wiki" href=""></a>
+													<a class="add" href=""></a>
+												</div>
+											</div> 
+										</li>
+									</ul> 
+								</div> 
+								<img src="images/SnextBtn.png"  alt="last"  id="last" width="40"/> 
+							</div>
+							<div class="tabs">
+					            <input id="tab_1" type="radio" name="tab"  />
+					            <label for="tab_1" id="tab_l1">Users List</label>
+					            <input id="tab_2" type="radio" name="tab" checked="checked"/>
+					            <label for="tab_2" id="tab_l2">Active list tab <span>38</span></label>
+					            <div class="tabs_cont">
+					                <div id="tab_c1">
+					                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quasi in, repellat rerum laborum quibusdam temporibus reprehenderit corrupti sequi tempore atque? Consequatur ea ex similique ad iure, vero ratione asperiores!</p>
+					                </div>
+					                <div id="tab_c2">
+					                	<div class="left_cont_box">
+						                    <div class="progressitem">
+											    <div class="progress" style="width: 70%">70%</div>
+											</div>
+											<ul class="breadcrumb">
+												<li class="after_active"><a href="#">Step 1</a></li>
+												<li class="after_active"><a href="#">Step 2</a></li>
+												<li class="active"><a href="#">Step 3 </a></li>
+												<li class="before_active"><a href="#">Step 4</a></li>
+												<li class="before_active"><a href="#">Step 5</a></li>
+											</ul>
+											<div id="container">
+												<div id="content">
+												  	<div id="price-range">
+											       		<form action="index.php">
+											        		<fieldset>
+														        <label for="min">Minimum Price:</label>
+														        <select id="min" name="min">
+														            <option value="0">0</option>
+														            <option value="10">10</option>
+														            <option value="20">20</option>
+														            <option value="30">30</option>
+														            <option value="40">40</option>
+														            <option value="50">50</option>
+														            <option value="60">60</option>
+														            <option value="70">70</option>
+														            <option value="80">80</option>
+														            <option value="90">90</option>
+														          </select>
+														          <br/>
+														        <label for="max">Maximum Price:</label>
+														        <select id="max" name="max">
+														            <option value="10">10</option>
+														            <option value="20">20</option>
+														            <option value="30">30</option>
+														            <option value="40">40</option>
+														            <option value="50">50</option>
+														            <option value="60">60</option>
+														            <option value="70">70</option>
+														            <option value="80">80</option>
+														            <option value="90">90</option>
+														            <option value="100">100</option>
+														        </select>
+													        </fieldset>
+												        </form>
+												    </div>
+										      	</div>
+										    </div> 
+										</div>
+									    <div id="diagram-id-1" class="diagram" data-circle-diagram='{
+												"percent": "37%",
+												"size": "70",
+												"borderWidth": "20",
+												"bgFill": "#e7e8e8",
+												"frFill": "#ffa352",
+												"textSize": "21",
+												"textColor": "#585858"
+												}'>
+										</div>
+										<div id="diagram-id-2" class="diagram"></div>
+										<div class="rating ">
+											<input type="radio" id="star5" name="rating"/><label for="star5">5</label>
+											<input type="radio" id="star4" name="rating"/><label for="star4">4</label>
+											<input type="radio" id="star3" name="rating"/><label for="star3">3</label>
+											<input type="radio" id="star2" name="rating"/><label for="star2">2</label>
+											<input type="radio" id="star1" name="rating"/><label for="star1">1</label>
+										</div>
+
+									</div>
+		                   		</div>
+		        			</div>
+		    			</section>
+					</div>
+					<div class="three_column">
+						<h2>How to succeed in online dating</h2>	
+		    			<div class="column-text">
+		     				<p>
+		    					There is no secret to being successful in online dating - you just need to be yourself. Be active, comment on other members' profiles, send them mails, chat with them and rate their profiles. We provide a wide range of features allowing you to gather as many contacts as you can handle. It is better to rotate photographs of yourself regularly, update the details on your profile frequently, use the instant communicator facility, and log onto the site as much as possible, as well as at different times, to meet as many members as you can. It is most important to be honest, positive and patient in all your site activities.
+		    				
+		    				<p class="orange-text">
+		    					In the "My Account" area visit the section for photos entitled "My Photos" and select the option "Click to upload photos". You will then prompted to upload a photo from your computer. Your 'Primary' photo is visible to everyone and should be a 'normal' photo. 'For friends only' photos are visible only to those on your friends list.Your 'Primary' photo is visible to everyone and should be a 'normal' photo. 'For friends only' photos are visible only to those on your friends list.
+		    				 </p>
+		    				 <p>
+		    				 	You can also upload photos to your dating profile from your Facebook account.
+		    				</p>
+		    			</p>
+		    				<ol>
+		    					<li><span>Access your dating life even when you’re not browsing <a href="#">Cupid.com</a>!</span></li>
+		    					<li><span>Search for new matches from your browser easily</span></li>
+		    					<li><span>Read and write messages & chat with members live; receive Datecasts, winks and alerts when your friends are online or have updated their profile info</span></li>
+		    					<li><span>Read and write messages & chat with members live; receive Datecasts, winks and alerts when your friends </span></li>
+		    				</ol>
+		    				<blockquote>	
+		    					In the "My Account" area visit the section for photos entitled "My Photos" and select the option "Click to upload photos". You will then be prompted to upload a photo from your computer. Your 'Primary' photo is visible to everyone and should be a 'normal' photo. 'For friends only' photos are visible only to those on your friends list.
+		    				</blockquote>
+		    				<a href="#">Click here to view more</a>
+		       			</div>
+		    		</div>		
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="inner">
+				<img src="images/footer-logo.png" alt=""/>
+				<ul>
+					<li>VD</li>
+					<li>Web Coder Test  Task</li>
+				</ul>
+				<p>2013</p>
+			</div>
+		</footer>
+		<script src="js/craftyslide.min.js"></script>
+        <script>
+	        $("#slideshow").craftyslide();
+	    </script> 
+	    <script>	
+	    $(document).ready(function() {
+			$("#slideshowCont").css("overflow", "hidden");
+			$("#last").css("display", "block");
+			$("#next").css("display", "block");
+			$('#slideShow ul').cycle({
+			fx: 'scrollLeft',
+			pause:1,
+			next: '#next',
+			prev: '#last',
+			timeout:0
+			});
+		});
+	    </script>
+	</body>
+</html>	
